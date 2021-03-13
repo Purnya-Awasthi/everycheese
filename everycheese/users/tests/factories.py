@@ -10,6 +10,7 @@ class UserFactory(DjangoModelFactory):
     username = Faker("user_name")
     email = Faker("email")
     name = Faker("name")
+    country_of_origin = factory.Faker('country_code')
 
     @post_generation
     def password(
